@@ -1,4 +1,4 @@
 package co.edu.uniquindio.proyecto.sgre.exceptions;
 
-public class reservaException {
+public class reservaException  extends Exception{
 }

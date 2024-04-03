@@ -7,7 +7,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-public class proyectoApplication extends Application {
+public class ventanaApplication extends Application {
     private Stage primaryStage;
     private BorderPane rootLayout;
 
@@ -21,9 +21,8 @@ public class proyectoApplication extends Application {
     public void mostrarVentanaPrincipal() {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(proyectoApplication.class.getResource("ventanaView.fxml"));
+            loader.setLocation(ventanaApplication.class.getResource("VentanaView.fxml"));
             AnchorPane rootLayout = (AnchorPane) loader.load();
-
            // ventanaViewController VentanaViewController = loader.getController();
 
 //            ventanaViewController.setAplicacion(this);

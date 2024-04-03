@@ -23,7 +23,7 @@ public class ModelFactoryController implements IModelFactoryService{
 
     public ModelFactoryController() {
 
-        System.out.println("invocación clase singleton");
+        System.out.println("Invocación clase singleton");
         cargarDatosBase();
     }
 

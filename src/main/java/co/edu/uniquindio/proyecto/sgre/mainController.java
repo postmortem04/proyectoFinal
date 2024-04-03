@@ -19,7 +19,7 @@ public class mainController {
         );
 
         if (modelFactoryController.agregarEmpleado(empleadoDto)) {
-            System.out.println("No existe se agrgeo correctamente");
+            System.out.println("No existe se agrego correctamente");
         } else {
             System.out.println("Ya existe");
         }

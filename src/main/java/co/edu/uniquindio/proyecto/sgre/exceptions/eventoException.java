@@ -1,4 +1,4 @@
 package co.edu.uniquindio.proyecto.sgre.exceptions;
 
-public class eventoException {
+public class eventoException  extends Exception{
 }

@@ -1,4 +1,12 @@
 package co.edu.uniquindio.proyecto.sgre.controller;
 
-public class ventanaController {
+import co.edu.uniquindio.proyecto.sgre.controller.service.IVentanaControllerService;
+
+public class ventanaController  implements IVentanaControllerService{
+    ModelFactoryController modelFactoryController;
+    public ventanaController(){
+        System.out.println("Llamando al singleton desde BancoServiceController");
+        modelFactoryController = ModelFactoryController.getInstance();
+
+    }
 }

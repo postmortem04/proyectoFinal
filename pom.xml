@@ -75,7 +75,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                co.edu.uniquindio.proyecto.sgre/co.edu.uniquindio.proyecto.sgre.proyectoApplication
+                                co.edu.uniquindio.proyecto.sgre/co.edu.uniquindio.proyecto.sgre.ventanaApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
