@@ -6,21 +6,32 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
+import java.net.URL;
 import java.util.Optional;
+import java.util.ResourceBundle;
 
 public class empleadoViewController {
     EmpleadoController empleadoControllerService;
     ObservableList<EmpleadoDto> listaEmpleadosDto = FXCollections.observableArrayList();
     EmpleadoDto empleadoSeleccionado;
+    @FXML
+    private ComboBox<String> ComboBoxRoles;
+
+    @FXML
+    private TableColumn<EmpleadoDto, String> tcRoles;
+    ObservableList<String> listaRoles = FXCollections.observableArrayList("Mesero", "Presentador", "Secretario");
 
 
-
-    public class PleaseProvideControllerClassName {
+    @FXML
+        private ResourceBundle resources;
+        @FXML
+        private URL location;
 
         @FXML
         private Button btnActualizar;
@@ -113,8 +124,6 @@ public class empleadoViewController {
         }
     }
 
-
-
     private void crearEmpleado() {
         //1. Capturar los datos
         EmpleadoDto empleadoDto = construirEmpleadoDto();
@@ -201,11 +210,9 @@ public class empleadoViewController {
         if(empleadoDto.nombre() == null || empleadoDto.nombre().equals(""))
             mensaje += "El nombre es invalido \n" ;
 
-            mensaje += "El apellido es invalido \n" ;
         if(empleadoDto.cedula() == null || empleadoDto.cedula().equals(""))
             mensaje += "El documento es invalido \n" ;
 
-            mensaje += "La direccion es invalida \n" ;
         if(mensaje.equals("")){
             return true;
         }else{
@@ -235,5 +242,11 @@ public class empleadoViewController {
         }
     }
 
+    public static void llenarBox(ComboBox<String> boxRoles, ObservableList<String> roles){
+            boxRoles.setItems(roles);
+    }
+    public void llenarRoles() {
+            llenarBox(ComboBoxRoles, listaRoles);
+    }
 }
-}
+

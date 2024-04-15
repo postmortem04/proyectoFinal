@@ -8,12 +8,13 @@ public class ventanaUtils {
     public static Ventana inicializarDatos() {
         Ventana Ventana = new Ventana();
         Empleado empleado = new Empleado();
-        empleado.setNombre("juan");
-        empleado.setCedula("125454");
-        empleado.setCorreo("aasfa@gmail.om");
+        empleado.setNombre("Daniel");
+        empleado.setCedula("10054");
+        empleado.setCorreo("Daniel@gmail.om");
         System.out.println("Información del banco creada");
         Ventana.getListaEmpleados().add(empleado);
 
         return Ventana;
+
   }
 }

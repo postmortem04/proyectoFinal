@@ -11,10 +11,11 @@ public class mainController {
     public static void main(String[] args) {
         ModelFactoryController modelFactoryController = ModelFactoryController.getInstance();
 
+
         EmpleadoDto empleadoDto = new EmpleadoDto(
                 "juan",
                 "arias",
-                "546"
+                "juanArias@gmail.com"
 
         );
 

@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 
 public class ventanaViewController {
     IVentanaControllerService ventanaControllerService;
+
     @FXML
     void initialize() {
         ventanaControllerService = new ventanaController();

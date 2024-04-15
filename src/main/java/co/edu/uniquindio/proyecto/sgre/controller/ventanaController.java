@@ -5,7 +5,7 @@ import co.edu.uniquindio.proyecto.sgre.controller.service.IVentanaControllerServ
 public class ventanaController  implements IVentanaControllerService{
     ModelFactoryController modelFactoryController;
     public ventanaController(){
-        System.out.println("Llamando al singleton desde BancoServiceController");
+        System.out.println("Llamando al singleton desde ventanaServiceController");
         modelFactoryController = ModelFactoryController.getInstance();
 
     }

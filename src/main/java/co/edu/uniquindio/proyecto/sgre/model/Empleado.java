@@ -7,12 +7,9 @@ public class Empleado extends Persona {
         private Double salario;
         private String codigo;
         ArrayList<Cliente> listaClientesAsociados = new ArrayList<Cliente>();
-
-
         public Empleado() {
 
         }
-
 
         public String getCodigo() {
             return codigo;

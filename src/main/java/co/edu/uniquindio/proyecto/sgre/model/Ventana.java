@@ -11,6 +11,7 @@ public class Ventana implements IVentanaService {
     public ArrayList<Empleado> getListaEmpleados() {
         return listaEmpleados;
     }
+
     public void setListaEmpleados(ArrayList<Empleado> listaEmpleados) {
         this.listaEmpleados = listaEmpleados;
     }
@@ -29,9 +30,7 @@ public class Ventana implements IVentanaService {
         }else{
             nuevoEmpleado = new Empleado();
             nuevoEmpleado.setNombre(nombre);
-            nuevoEmpleado.setApellido(apellido);
             nuevoEmpleado.setCedula(cedula);
-            nuevoEmpleado.setFechaNacimiento(fechaNacimiento);
             getListaEmpleados().add(nuevoEmpleado);
         }
         return nuevoEmpleado;
@@ -48,13 +47,9 @@ public class Ventana implements IVentanaService {
             throw new EmpleadoException("El empleado a actualizar no existe");
         else{
             empleadoActual.setNombre(empleado.getNombre());
-            empleadoActual.setApellido(empleado.getApellido());
             empleadoActual.setCedula(empleado.getCedula());
-            empleadoActual.setTelefono(empleado.getTelefono());
             empleadoActual.setCorreo(empleado.getCorreo());
-            empleadoActual.setFechaNacimiento(empleado.getFechaNacimiento());
-            empleadoActual.setSalario(empleado.getSalario());
-            empleadoActual.setCodigo(empleado.getCodigo());
+
             return true;
         }
     }
